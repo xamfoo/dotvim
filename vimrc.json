@@ -1,0 +1,131 @@
+[
+  {
+    "keymap": {
+      "insertMode": [
+        { "input": "<F1>", "output": "<Esc>" },
+        { "input": "jk", "output": "<Esc>" },
+        { "input": "<Tab>;", "output": "<C-o>m`<C-o><S-a>;<C-o>``" },
+        { "input": "<Tab>,", "output": "<C-o>m`<C-o><S-a>,<C-o>``" }
+      ],
+
+      "normalMode": [
+        { "input": "<F1>", "output": "<Esc>" },
+        { "input": "/", "output": "/\\c" }
+      ],
+
+      "commandLineMode": [
+        { "input": "jk", "output": "<Esc>" }
+      ]
+    },
+
+    "setOptions": {
+      "autoindent": true,
+      "autoread": true,
+      "backspace": { "=": "indent,eol,start" },
+      "display": { "+": "lastline" },
+      "formatoptions": { "+": "j" },
+      "hidden": true,
+      "incsearch": true,
+      "guifont": { "=": "mplus-1mn-regular:h12" },
+      "guioptions": { "=": "" },
+      "laststatus": { "=": "2" },
+      "mouse": { "=": "a" },
+      "nrformats": { "-": "octal" },
+      "number": true,
+      "ruler": true,
+      "smarttab": true,
+      "wildmenu": true
+    },
+
+    "variables": {
+      "g:mapleader": "\"\t\""
+    }
+  },
+
+  { "junegunn/vim-plug": "airblade/vim-gitgutter" },
+  { "junegunn/vim-plug": "AndrewRadev/splitjoin.vim" },
+  { "junegunn/vim-plug": "chriskempson/base16-vim" },
+  { "junegunn/vim-plug": { "name": "dracula/vim", "dir": "~/.vim/plugged/dracula" } },
+
+  {
+    "junegunn/vim-plug": "jreybert/vimagit",
+    "variables": {
+      "g:magit_default_fold_level": 0
+    }
+  },
+  {
+    "junegunn/vim-plug": ["/usr/local/opt/fzf", "junegunn/fzf.vim"],
+
+    "commands": [
+      {
+        "input": "Rg",
+        "bang" : 1,
+        "nargs": "*",
+        "remap": 1,
+        "output": "call fzf#vim#grep(\"rg --column --line-number --no-heading --color=always --hidden --smart-case \".shellescape(<q-args>), 1, <bang>0)"
+      }
+    ],
+
+    "keymap": {
+      "normalMode": [
+        { "input": "<Leader>b", "output": ":Buffers<CR>" },
+        { "input": "<Leader>f", "output": ":Rg<CR>" },
+        { "input": "<Leader>n", "output": ":Files<CR>" }
+      ]
+    }
+  },
+
+  { "junegunn/vim-plug": "moll/vim-node" },
+  { "junegunn/vim-plug": "qpkorr/vim-bufkill" },
+
+  {
+    "junegunn/vim-plug": "Raimondi/delimitMate",
+
+    "variables": {
+      "g:delimitMate_expand_space": 1,
+      "g:delimitMate_expand_cr": 1
+    },
+
+    "keymap": {
+      "insertMode": [
+        {
+          "input": "<Tab>L",
+          "expr": "delimitMate#ShouldJump() ? \"<Plug>delimitMateJumpMany\" : \"<Tab>L\"",
+          "remap": 1
+        },
+        {
+          "input": "<Tab>l",
+          "expr": "delimitMate#ShouldJump() ? \"<Plug>delimitMateS-Tab\" : \"<Tab>l\"",
+          "remap": 1
+        },
+        {
+          "input": "<Tab><BS>",
+          "expr": "delimitMate#ShouldJump() ? \"<Plug>delimitMateS-BS\" : \"<Tab><BS>\"",
+          "remap": 1
+        }
+      ]
+    }
+  },
+
+  { "junegunn/vim-plug": "sheerun/vim-polyglot" },
+  { "junegunn/vim-plug": "tpope/vim-commentary" },
+  { "junegunn/vim-plug": "tpope/vim-eunuch" },
+
+  {
+    "junegunn/vim-plug": "tpope/vim-fugitive",
+
+    "source": "~/.vim/vim-fugitive.vim",
+
+    "keymap": {
+      "normalMode": [
+        { "input": "<Leader>3", "output": ":call ToggleGStatus()<CR>" }
+      ]
+    }
+  },
+
+  { "junegunn/vim-plug": "tpope/vim-sleuth" },
+  { "junegunn/vim-plug": "tpope/vim-surround" },
+  { "junegunn/vim-plug": "tpope/vim-unimpaired" },
+  { "junegunn/vim-plug": "w0rp/ale" },
+  { "junegunn/vim-plug": "xamfoo/vim-ranger" }
+]
