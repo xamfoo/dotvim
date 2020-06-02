@@ -35,3 +35,6 @@
 [submodule "rainbow_parentheses.vim"]
 	path = pack/default/start/rainbow_parentheses.vim
 	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "vim-eunuch"]
+	path = pack/default/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
