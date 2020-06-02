@@ -19,9 +19,13 @@ filetype plugin indent on
 colorscheme gruvbox
 ino <F1> <Esc>
 nno <F1> <Esc>
-nno / /\c
+nno <silent> / /\c
 ino jk <Esc>
 cno jk <Esc>
-nno <Leader>b :Buffers<CR>
-nno <Leader>f :Rg<CR>
-nno <Leader>n :Files<CR>
+nno <silent> <Leader>b :Buffers<CR>
+nno <silent> <Leader>f :Rg<CR>
+nno <silent> <Leader>n :Files<CR>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
