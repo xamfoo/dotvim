@@ -41,3 +41,9 @@
 [submodule "vim-repeat"]
 	path = pack/default/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim-sexp"]
+	path = pack/default/start/vim-sexp
+	url = https://github.com/guns/vim-sexp.git
+[submodule "vim-sexp-mappings-for-regular-people"]
+	path = pack/default/start/vim-sexp-mappings-for-regular-people
+	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
