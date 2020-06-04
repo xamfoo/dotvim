@@ -47,3 +47,6 @@
 [submodule "vim-sexp-mappings-for-regular-people"]
 	path = pack/default/start/vim-sexp-mappings-for-regular-people
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+[submodule "vim-bufkill"]
+	path = pack/default/start/vim-bufkill
+	url = https://github.com/qpkorr/vim-bufkill.git
