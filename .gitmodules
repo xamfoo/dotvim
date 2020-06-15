@@ -50,3 +50,6 @@
 [submodule "vim-bufkill"]
 	path = pack/default/start/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill.git
+[submodule "nnn.vim"]
+	path = pack/default/start/nnn.vim
+	url = https://github.com/mcchrish/nnn.vim.git

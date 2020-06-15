@@ -31,3 +31,5 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+let g:nnn#set_default_mappings = 0
+nnoremap <silent> - :NnnPicker<CR>
