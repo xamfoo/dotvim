@@ -22,6 +22,8 @@ nno <F1> <Esc>
 nno <silent> / /\c
 ino jk <Esc>
 cno jk <Esc>
+ino <silent> <Leader>, <C-o>m`<C-o><S-a>,<C-o>``
+ino <silent> <Leader>; <C-o>m`<C-o><S-a>;<C-o>``
 nno <silent> <Leader>b :Buffers<CR>
 nno <silent> <Leader>f :Rg<CR>
 nno <silent> <Leader>n :Files<CR>
