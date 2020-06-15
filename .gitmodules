@@ -53,3 +53,6 @@
 [submodule "nnn.vim"]
 	path = pack/default/start/nnn.vim
 	url = https://github.com/mcchrish/nnn.vim.git
+[submodule "vim-nix"]
+	path = pack/default/start/vim-nix
+	url = https://github.com/LnL7/vim-nix.git
