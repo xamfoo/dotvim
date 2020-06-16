@@ -56,3 +56,6 @@
 [submodule "vim-nix"]
 	path = pack/default/start/vim-nix
 	url = https://github.com/LnL7/vim-nix.git
+[submodule "yats.vim"]
+	path = pack/default/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
