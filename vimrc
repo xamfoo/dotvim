@@ -8,14 +8,13 @@ set mouse=a
 set nobackup
 set noswapfile
 set nowritebackup
+set nrformats+=alpha
 set nrformats-=octal
 set number
 set ruler
 set shortmess+=c
 set updatetime=300
 let g:mapleader="\t"
-let g:nnn#set_default_mappings = 0
-let g:nnn#command = 'nnn -H'
 syntax on
 filetype plugin indent on
 colorscheme gruvbox
@@ -29,8 +28,13 @@ ino <silent> <Leader>; <C-o>m`<C-o><S-a>;<C-o>``
 nno <silent> <Leader>b :Buffers<CR>
 nno <silent> <Leader>f :Rg<CR>
 nno <silent> <Leader>n :Files<CR>
-nno <silent> - :call nnn#pick(expand('%:p:h') . '/' . expand('%:p:t'))<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+if executable("nnn")
+  let g:nnn#set_default_mappings = 0
+  let g:nnn#command = 'nnn -H'
+  nno <silent> - :call nnn#pick(expand('%:p:h') . '/' . expand('%:p:t'))<CR>
+endif
