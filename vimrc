@@ -17,7 +17,7 @@ set updatetime=300
 let g:mapleader="\t"
 syntax on
 filetype plugin indent on
-colorscheme gruvbox
+try | colorscheme gruvbox | catch | endtry
 ino <F1> <Esc>
 nno <F1> <Esc>
 nno <silent> / /\c
@@ -25,16 +25,29 @@ ino jk <Esc>
 cno jk <Esc>
 ino <silent> <Leader>, <C-o>m`<C-o><S-a>,<C-o>``
 ino <silent> <Leader>; <C-o>m`<C-o><S-a>;<C-o>``
-nno <silent> <Leader>b :Buffers<CR>
-nno <silent> <Leader>f :Rg<CR>
-nno <silent> <Leader>n :Files<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 if executable("nnn")
   let g:nnn#set_default_mappings = 0
   let g:nnn#command = 'nnn -H'
   nno <silent> - :call nnn#pick(expand('%:p:h') . '/' . expand('%:p:t'))<CR>
 endif
+if executable("fzf")
+  nno <silent> <Leader>b :Buffers<CR>
+  nno <silent> <Leader>n :Files<CR>
+  if executable("rg")
+    nno <silent> <Leader>f :Rg<CR>
+  endif
+endif
+" coc.nvim {
+let g:coc_global_extensions = [
+  \'coc-css',
+  \'coc-deno',
+  \'coc-json',
+  \'coc-prettier',
+  \'coc-tsserver',
+  \]
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+vmap <silent> <Leader>f <Plug>(coc-format-selected)
+" }

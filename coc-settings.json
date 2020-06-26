@@ -10,5 +10,6 @@
       "initializationOptions": {
       }
     }
-  }
+  },
+  "prettier.eslintIntegration": true
 }
