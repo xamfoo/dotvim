@@ -51,4 +51,12 @@ nm <silent> gli <Plug>(coc-implementation)
 nm <silent> glt <Plug>(coc-type-definition)
 nm <silent> glr <Plug>(coc-references)
 vm <silent> <Leader>f <Plug>(coc-format-selected)
+nno <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 " }
