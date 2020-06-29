@@ -10,5 +10,6 @@
       "initializationOptions": {
       }
     }
-  }
+  },
+  "eslint.autoFixOnSave": true
 }

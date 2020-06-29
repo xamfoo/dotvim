@@ -41,6 +41,7 @@ endif
 let g:coc_global_extensions = [
   \'coc-css',
   \'coc-deno',
+  \'coc-eslint',
   \'coc-json',
   \'coc-prettier',
   \'coc-tsserver',
