@@ -57,6 +57,8 @@ au global FileType
   \ vm <buffer> = <Plug>(coc-format-selected) |
   \ nm <buffer> == V<Plug>(coc-format-selected)
 nno <silent> K :call <SID>show_documentation()<CR>
+nm <silent> [ge <Plug>(coc-diagnostic-prev-error)
+nm <silent> ]ge <Plug>(coc-diagnostic-next-error)
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
