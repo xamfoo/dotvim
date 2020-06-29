@@ -25,6 +25,7 @@ ino jk <Esc>
 cno jk <Esc>
 ino <silent> <Leader>, <C-o>m`<C-o><S-a>,<C-o>``
 ino <silent> <Leader>; <C-o>m`<C-o><S-a>;<C-o>``
+aug global | au! | aug END
 if executable("nnn")
   let g:nnn#set_default_mappings = 0
   let g:nnn#command = 'nnn -H'
@@ -51,7 +52,10 @@ nm <silent> gld <Plug>(coc-definition)
 nm <silent> gli <Plug>(coc-implementation)
 nm <silent> glt <Plug>(coc-type-definition)
 nm <silent> glr <Plug>(coc-references)
-vm <silent> <Leader>f <Plug>(coc-format-selected)
+au global FileType
+  \ graphql,javascript,javascriptreact,json,typescript,typescriptreact
+  \ vm <buffer> = <Plug>(coc-format-selected) |
+  \ nm <buffer> == V<Plug>(coc-format-selected)
 nno <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
