@@ -59,3 +59,6 @@
 [submodule "yats.vim"]
 	path = pack/default/start/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "vim-vue"]
+	path = pack/default/start/vim-vue
+	url = https://github.com/posva/vim-vue.git
