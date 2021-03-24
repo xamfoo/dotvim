@@ -8,9 +8,18 @@
       "additionalSchemes": ["jar", "zipfile"],
       "trace.server": "verbose",
       "initializationOptions": {
+        "ignore-classpath-directories": true
       }
+    },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": [
+              "terraform",
+              "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
     }
-  },
-  "eslint.autoFixOnSave": true,
-  "eslint.enable": false
+  }
 }

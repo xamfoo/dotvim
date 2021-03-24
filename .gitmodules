@@ -62,3 +62,9 @@
 [submodule "vim-vue"]
 	path = pack/default/start/vim-vue
 	url = https://github.com/posva/vim-vue.git
+[submodule "vim-terraform"]
+	path = pack/default/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
+[submodule "jsonc.vim"]
+	path = pack/default/start/jsonc.vim
+	url = https://github.com/neoclide/jsonc.vim.git
