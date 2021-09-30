@@ -49,15 +49,18 @@ if executable("fzf")
     nno <silent> <Leader>f :RG<CR>
   endif
 endif
+nno <silent> <Leader>g :Ge:<CR>
 " coc.nvim {
 let g:coc_global_extensions = [
   \'coc-css',
+  \'coc-cssmodules',
   \'coc-eslint',
   \'coc-deno',
   \'coc-json',
   \'coc-prettier',
   \'coc-tsserver',
   \'coc-vimlsp',
+  \'coc-yaml',
   \]
 nm <silent> gld <Plug>(coc-definition)
 nm <silent> gli <Plug>(coc-implementation)
@@ -75,6 +78,8 @@ au global BufRead coc-settings.json set ft=jsonc
 nno <silent> K :call <SID>show_documentation()<CR>
 nm <silent> [ge <Plug>(coc-diagnostic-prev-error)
 nm <silent> ]ge <Plug>(coc-diagnostic-next-error)
+nm <silent> [gd <Plug>(coc-diagnostic-prev)
+nm <silent> ]gd <Plug>(coc-diagnostic-next)
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
