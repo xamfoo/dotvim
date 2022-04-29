@@ -68,3 +68,7 @@
 [submodule "jsonc.vim"]
 	path = pack/default/start/jsonc.vim
 	url = https://github.com/neoclide/jsonc.vim.git
+[submodule "unicode.vim"]
+	path = pack/default/start/unicode.vim
+	url = https://github.com/chrisbra/unicode.vim.git
+	branch = master
