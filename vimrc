@@ -6,6 +6,7 @@ set backspace=indent,eol,start
 set belloff=all
 set hidden
 set incsearch
+set laststatus=2
 set mouse=a
 set nobackup
 set noswapfile
