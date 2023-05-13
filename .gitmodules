@@ -4,6 +4,7 @@
 [submodule "vim-clojure-static"]
 	path = pack/default/start/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
+	ignore = untracked
 [submodule "fzf"]
 	path = pack/default/start/fzf
 	url = https://github.com/junegunn/fzf.git
@@ -44,6 +45,7 @@
 [submodule "vim-sexp"]
 	path = pack/default/start/vim-sexp
 	url = https://github.com/guns/vim-sexp.git
+	ignore = untracked
 [submodule "vim-sexp-mappings-for-regular-people"]
 	path = pack/default/start/vim-sexp-mappings-for-regular-people
 	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
@@ -53,6 +55,7 @@
 [submodule "nnn.vim"]
 	path = pack/default/start/nnn.vim
 	url = https://github.com/mcchrish/nnn.vim.git
+	ignore = untracked
 [submodule "vim-nix"]
 	path = pack/default/start/vim-nix
 	url = https://github.com/LnL7/vim-nix.git
