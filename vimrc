@@ -37,10 +37,10 @@ if executable("nnn")
 endif
 if executable("fzf")
   nno <silent> <Leader>b :Buffers<CR>
-  nno <silent><expr> <Leader>n (len(system('git rev-parse'))) ? ':Files' : ':GFiles -c -o --exclude-standard'."\<CR>"
+  nno <silent><expr> <Leader>n len(system('git rev-parse')) ? ':Files<CR>' : ':GFiles -c -o --exclude-standard<CR>'
   if executable("rg")
     function! RipgrepFzf(query, fullscreen)
-      let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+      let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case --hidden --iglob "!.git/" -- %s || true'
       let initial_command = printf(command_fmt, shellescape(a:query))
       let reload_command = printf(command_fmt, '{q}')
       let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
