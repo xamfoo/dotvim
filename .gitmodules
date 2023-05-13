@@ -75,3 +75,7 @@
 	path = pack/default/start/unicode.vim
 	url = https://github.com/chrisbra/unicode.vim.git
 	branch = master
+[submodule "vimtex"]
+	path = pack/default/start/vimtex
+	url = https://github.com/lervag/vimtex.git
+	branch = master
