@@ -33,6 +33,7 @@ aug global | au! | aug END
 if executable("nnn")
   let g:nnn#set_default_mappings = 0
   let g:nnn#command = 'nnn -H'
+  let g:nnn#replace_netrw = 1
   nn <silent> - :call nnn#pick(expand('%:p:h') . '/' . expand('%:p:t'))<CR>
 endif
 if executable("fzf")
