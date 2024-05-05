@@ -4,11 +4,16 @@
       "command": "bash",
       "args": ["-c", "clojure-lsp"],
       "filetypes": ["clojure"],
-      "rootPatterns": ["project.clj"],
+      "rootPatterns": ["deps.edn", "project.clj"],
       "additionalSchemes": ["jar", "zipfile"],
       "trace.server": "verbose",
+      "disableDiagnostics": false,
       "initializationOptions": {
-        "ignore-classpath-directories": true
+        "project-specs": [{
+          "project-path": "deps.edn",
+          "classpath-cmd": ["clj", "-Spath"]
+        }],
+        "use-metadata-for-privacy?": true
       }
     },
     "terraform": {
