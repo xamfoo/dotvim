@@ -21,7 +21,7 @@ set updatetime=300
 let g:mapleader="\t"
 syntax on
 filetype plugin indent on
-try | colorscheme gruvbox | catch | endtry
+try | colorscheme gruvbox | catch | colorscheme darkblue | endtry
 ino <F1> <Esc>
 nno <F1> <Esc>
 nno <silent> / /\c
