@@ -53,7 +53,7 @@ if executable("fzf")
   endif
 endif
 if executable("zathura") | let g:vimtex_view_method = 'zathura' | endif
-nno <silent> <Leader>g :Ge:<CR>
+nno <silent> <Leader>g :Git<CR>
 nno <silent> <Leader>F :call CocAction('format')<CR>
 " coc.nvim {
 let g:coc_global_extensions = [
